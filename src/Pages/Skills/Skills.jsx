@@ -3,6 +3,8 @@ import "./Skills.css";
 import skills from "../../utils/skills";
 import { motion } from "framer-motion";
 import SkillCard from "../../Components/SkillCard/SkillCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
 
 const Skills = () => {
   return (
@@ -11,12 +13,16 @@ const Skills = () => {
         transition={{ duration: 1.5 }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        className="text-4xl capitalize"
+        className="text-4xl capitalize font-bold"
       >
-        Skill
+        <FontAwesomeIcon
+          icon={faCode}
+          style={{ color: "rgb(151, 182, 143)" }}
+        />{" "}
+        Skills
       </motion.h3>
 
-      <section className="grid w-100 sm:grid-cols-1  md:grid-cols-2 xl:grid-cols-3 gap-24  items-center justify-center">
+      <section className="grid w-100 sm:grid-cols-2  md:grid-cols-2 xl:grid-cols-3 gap-24  items-center justify-center cont-skills">
         {skills.map((skill) => (
           <SkillCard key={skill.id} skill={skill.skill} icon={skill.icon} />
         ))}

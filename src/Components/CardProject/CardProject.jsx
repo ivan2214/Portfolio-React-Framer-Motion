@@ -5,7 +5,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { AnimatePresence, motion } from "framer-motion";
 
-const CardProject = ({ url, description, image, name, id, tecnology }) => {
+const CardProject = ({ url,gitHub, description, image, name, id, tecnology }) => {
   const list = {
     hidden: { opacity: 0 },
 
@@ -20,7 +20,7 @@ const CardProject = ({ url, description, image, name, id, tecnology }) => {
 
   const item = {
     hidden: { opacity: 0 },
-    
+
     show: { opacity: 1 },
   };
 
@@ -32,9 +32,9 @@ const CardProject = ({ url, description, image, name, id, tecnology }) => {
   return (
     <>
       <motion.div
-        transition={{ duration: 2 }}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+       transition={{ duration: 1 }}
+       initial={{ opacity: 0, translateX: -100 }}
+       whileInView={{ opacity: 1, translateX: 0 }}
         className="card"
       >
         <motion.section className="card-cont-img">
@@ -63,18 +63,23 @@ const CardProject = ({ url, description, image, name, id, tecnology }) => {
               className="social-media"
             >
               <motion.li variants={item}>
-                <FontAwesomeIcon
-                  className="card-icons"
-                  icon={faGlobe}
-                  size="2x"
-                />
+                <a href={url} target="BLANCK">
+                  <FontAwesomeIcon
+                    className="card-icons"
+                    icon={faGlobe}
+                    size="2x"
+                  />
+                </a>
               </motion.li>
               <motion.li variants={item}>
-                <FontAwesomeIcon
-                  className="card-icons"
-                  icon={faGithub}
-                  size="2x"
-                />
+                <a href={gitHub} target="BLANCK">
+                  {" "}
+                  <FontAwesomeIcon
+                    className="card-icons"
+                    icon={faGithub}
+                    size="2x"
+                  />
+                </a>
               </motion.li>
             </motion.ul>
           </motion.section>

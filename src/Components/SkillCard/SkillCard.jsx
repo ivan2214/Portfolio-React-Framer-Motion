@@ -7,21 +7,17 @@ const SkillCard = ({ skill, icon }) => {
   return (
     <motion.article
       transition={{ duration: 2 }}
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      className="flex justify-center items-center flex-col w-100"
+      initial={{ opacity: 0, translateX: -100 }}
+      whileInView={{ opacity: 1, translateX: 0 }}
+      className="flex justify-center items-center flex-col w-100 cont-img-skills"
     >
       <motion.img
-        whileInView={{
-          scale: [1, 2, 2, 1, 1],
-          rotate: [0, 0, 270, 270, 0],
-          borderRadius: ["20%", "20%", "50%", "50%", "20%"],
-        }}
+        transition={{ duration: 2 }}
         className="w-24"
         src={icon}
         alt={skill}
       />
-      <h3 className="text-xl">{skill}</h3>
+      <h3 className="text-xl font-medium">{skill}</h3>
     </motion.article>
   );
 };

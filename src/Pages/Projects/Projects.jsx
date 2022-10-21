@@ -6,6 +6,12 @@ import spaceX from "../../assets/Projects/SpaceX.png";
 import todoList from "../../assets/Projects/Todolist.png";
 import peliculas from "../../assets/Projects/peliculas.png";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCode,
+  faFolder,
+  faFolderOpen,
+} from "@fortawesome/free-solid-svg-icons";
 const Projects = () => {
   const informacion = [
     {
@@ -15,6 +21,8 @@ const Projects = () => {
       name: "App De Peliculas",
       image: peliculas,
       tecnology: "React ChakraIu Css HTML",
+      url: "https://app-de-pelis.netlify.app/",
+      gitHub: "https://github.com/ivan2214/App-De-Pelis",
     },
     {
       id: "2",
@@ -23,6 +31,8 @@ const Projects = () => {
       name: "App De Lista de tareas",
       image: todoList,
       tecnology: "React ChakraIu Css HTML",
+      url: "https://app-de-pelis.netlify.app/",
+      gitHub: "https://github.com/ivan2214/App-De-Pelis",
     },
     {
       id: "3",
@@ -31,6 +41,8 @@ const Projects = () => {
       name: "App De Rick and Morty",
       image: imgRick,
       tecnology: "React ChakraIu Css HTML",
+      url: "https://app-de-pelis.netlify.app/",
+      gitHub: "https://github.com/ivan2214/App-De-Pelis",
     },
     {
       id: "4",
@@ -39,21 +51,30 @@ const Projects = () => {
       name: "App de SpaceX",
       image: spaceX,
       tecnology: "React ChakraIu Css HTML",
+      url: "https://app-de-pelis.netlify.app/",
+      gitHub: "https://github.com/ivan2214/App-De-Pelis",
     },
   ];
 
   return (
-    <section id="projects">
+    <motion.section
+      id="projects"
+     
+    >
       <motion.h3
-        transition={{ duration: 1.5 }}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        className="text-3xl capitalize"
+        transition={{ duration: 1 }}
+        initial={{ opacity: 0, translateX: -100 }}
+        whileInView={{ opacity: 1, translateX: 0 }}
+        className="text-4xl capitalize font-bold"
       >
-        projects
+        <FontAwesomeIcon
+          icon={faFolderOpen}
+          style={{ color: "rgb(151, 182, 143)" }}
+        />{" "}
+        Projects
       </motion.h3>
 
-      <section className="projects-cont-cards sm:gap-32 md:gap-28 lg:gap-10">
+      <section className="projects-cont-cards ">
         {informacion.map((info) => (
           <CardProject
             url={info.url}
@@ -63,10 +84,11 @@ const Projects = () => {
             name={info.name}
             image={info.image}
             tecnology={info.tecnology}
+            gitHub={info.gitHub}
           />
         ))}
       </section>
-    </section>
+    </motion.section>
   );
 };
 
