@@ -1,6 +1,6 @@
 import React from "react";
 import CardProject from "../../Components/CardProject/CardProject";
-import "./Projeects.css";
+import "./Projects.css";
 import informacion from "../../utils/informacion";
 import { motion } from "framer-motion";
 const Projects = () => {

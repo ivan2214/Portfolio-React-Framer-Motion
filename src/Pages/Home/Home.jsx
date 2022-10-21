@@ -1,12 +1,8 @@
-import React from "react";
-
 import Header from "../../Components/Header/Header";
-
 import Nav from "../../Components/Nav/Nav";
-
-import "./Home.css";
 import Projects from "../Projects/projects";
 import Skills from "../Skills/Skills";
+import "./Home.css";
 
 const Home = () => {
   return (
