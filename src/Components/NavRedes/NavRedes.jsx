@@ -18,7 +18,7 @@ const NavRedes = () => {
             className="nav-link"
             target="blanck"
           >
-            <FontAwesomeIcon icon={faLinkedin} beat fade size={"lg"} />
+            <FontAwesomeIcon icon={faLinkedin} size={"lg"} />
           </a>
         </li>
         <li className="nav-item">
@@ -27,7 +27,7 @@ const NavRedes = () => {
             target="blanck"
             className="nav-link"
           >
-            <FontAwesomeIcon icon={faGithub} beat fade size={"lg"} />
+            <FontAwesomeIcon icon={faGithub} size={"lg"} />
           </a>
         </li>
         <li className="nav-item">
@@ -36,13 +36,7 @@ const NavRedes = () => {
             target="blanck"
             className="nav-link"
           >
-            <FontAwesomeIcon
-              icon={faEnvelope}
-              target="blanck"
-              beat
-              fade
-              size={"lg"}
-            />
+            <FontAwesomeIcon icon={faEnvelope} target="blanck" size={"lg"} />
           </a>
         </li>
         <li className="nav-item">
@@ -51,13 +45,7 @@ const NavRedes = () => {
             target="blanck"
             className="nav-link"
           >
-            <FontAwesomeIcon
-              icon={faWhatsapp}
-              target="blanck"
-              beat
-              fade
-              size={"lg"}
-            />
+            <FontAwesomeIcon icon={faWhatsapp} target="blanck" size={"lg"} />
           </a>
         </li>
       </ul>

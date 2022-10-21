@@ -3,7 +3,6 @@ import React from "react";
 import "./SkillCard.css";
 
 const SkillCard = ({ skill, icon }) => {
-  console.log(skill, icon);
   return (
     <motion.article
       transition={{ duration: 2 }}
