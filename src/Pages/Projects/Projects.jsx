@@ -54,19 +54,17 @@ const Projects = () => {
       </motion.h3>
 
       <section className="projects-cont-cards sm:gap-32 md:gap-28 lg:gap-10">
-        {informacion.map((info) => {
-          return (
-            <CardProject
-              url={info.url}
-              description={info.description}
-              id={info.id}
-              key={info.id}
-              name={info.name}
-              image={info.image}
-              tecnology={info.tecnology}
-            />
-          );
-        })}
+        {informacion.map((info) => (
+          <CardProject
+            url={info.url}
+            description={info.description}
+            id={info.id}
+            key={info.id}
+            name={info.name}
+            image={info.image}
+            tecnology={info.tecnology}
+          />
+        ))}
       </section>
     </section>
   );
