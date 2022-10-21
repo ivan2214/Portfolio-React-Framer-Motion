@@ -1,6 +1,6 @@
 import Header from "../../Components/Header/Header";
 import Nav from "../../Components/Nav/Nav";
-import Projects from "../Projects/projects";
+import Projects from "../Projects/Projects";
 import Skills from "../Skills/Skills";
 import "./Home.css";
 

@@ -1,10 +1,10 @@
 import React from "react";
 import CardProject from "../../Components/CardProject/CardProject";
 import "./Projects.css";
-import imgRick from "../assets/Projects/ricky.png";
-import spaceX from "../assets/Projects/SpaceX.png";
-import todoList from "../assets/Projects/Todolist.png";
-import peliculas from "../assets/Projects/peliculas.png";
+import imgRick from "../../assets/Projects/ricky.png";
+import spaceX from "../../assets/Projects/SpaceX.png";
+import todoList from "../../assets/Projects/Todolist.png";
+import peliculas from "../../assets/Projects/peliculas.png";
 import { motion } from "framer-motion";
 const Projects = () => {
   const informacion = [
