@@ -6,7 +6,6 @@
   justify-content: center;
   flex-wrap: wrap;
   margin: 0;
-
   border: 0;
 }
 
@@ -30,6 +29,5 @@
   .projects-cont-cards {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto-fill, 1fr);
-    gap: 1.5rem;
   }
 }

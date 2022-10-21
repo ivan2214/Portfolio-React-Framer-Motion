@@ -15,7 +15,7 @@ const Projects = () => {
         projects
       </motion.h3>
 
-      <section className="projects-cont-cards">
+      <section className="projects-cont-cards sm:gap-32 md:gap-28 lg:gap-10">
         {informacion.map((info) => {
           return (
             <CardProject
