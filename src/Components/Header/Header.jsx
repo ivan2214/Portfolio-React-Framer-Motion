@@ -9,7 +9,7 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 const Header = () => {
   return (
     <header className="cont">
-      <figure className="cont-img">
+      <figure className="cont-img ">
         <motion.img
           animate={{
             scale: [1, 2, 2, 1, 1],
@@ -22,7 +22,7 @@ const Header = () => {
             borderRadius: ["20%", "20%", "50%", "50%", "20%"],
           }}
           src={img}
-          className="cont-img-image"
+          className="cont-img-image "
           alt=""
         />
       </figure>

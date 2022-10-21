@@ -17,7 +17,7 @@
 }
 
 .cont-img {
-  width: 10%;
+  width: 20%;
 }
 
 .cont-texts {
@@ -61,7 +61,12 @@ strong {
   color: #97b68f;
 }
 
-
-.cont-arrow{
+.cont-arrow {
   margin-top: 4.5rem;
+}
+
+@media screen and (min-width: 768px)  {
+  .cont-img {
+    width: 10%;
+  }
 }
