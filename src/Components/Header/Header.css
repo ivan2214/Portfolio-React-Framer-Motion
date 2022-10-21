@@ -62,7 +62,15 @@ strong {
 }
 
 .cont-arrow {
-  margin-top: 4.5rem;
+  margin-top: 1.5rem;
+}
+
+.arrowDown{
+  transition: .3s color ease;
+}
+
+.arrowDown:hover{
+color: #97b68f;
 }
 
 @media screen and (min-width: 768px)  {

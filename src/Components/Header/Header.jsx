@@ -33,21 +33,11 @@ const Header = () => {
           Especializado en el stack <strong>MERN</strong>
         </p>
       </section>
-      <section className="cont-redes">
-        <a
-          href="https://www.linkedin.com/in/bongiovanni-ivan45/"
-          target="BLANCK"
-        >
-          <FontAwesomeIcon icon={faLinkedin} bounce size={"xl"} />
-        </a>
-        <a href="https://github.com/ivan2214" target="BLANCK">
-          <FontAwesomeIcon icon={faGithub} bounce size={"xl"} />
-        </a>
-      </section>
+ 
 
       <section className="cont-arrow">
-        <a href="#projects">
-          <FontAwesomeIcon icon={faArrowDown} size={"xl"} beat fade />
+        <a href="#projects" className="arrowDown">
+          <FontAwesomeIcon icon={faArrowDown} size={"2xl"} beat fade />
         </a>
       </section>
     </header>
