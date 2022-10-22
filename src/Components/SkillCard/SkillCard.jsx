@@ -13,18 +13,18 @@ const SkillCard = ({ skill, icon }) => {
   return (
     <motion.article
       transition={{ duration: 1.5 }}
-      variants={item}
+      
       initial={{ opacity: 0, translateX: -100 }}
       whileInView={{ opacity: 1, translateX: 0 }}
-      className="flex justify-center items-center flex-col w-100 cont-img-skills"
+      className="flex justify-center items-center flex-col w-full cont-img-skills gap-10 overflow-hidden"
     >
       <motion.img
-        transition={{ duration: 2 }}
-        className="w-24 image-skills"
+        
+        className="image-skills"
         src={icon}
         alt={skill}
       />
-      <h3 className="text-xl text-tecnology font-medium">{skill}</h3>
+      <h3 className=" text-tecnology font-medium">{skill}</h3>
     </motion.article>
   );
 };

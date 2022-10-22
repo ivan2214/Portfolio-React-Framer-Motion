@@ -1,6 +1,8 @@
 #skills {
   width: 100%;
-  padding: 1.5rem;
+  padding: 2.5rem;
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   gap: 3em;
   flex-direction: column;
@@ -9,8 +11,11 @@
 }
 
 .cont-skills {
+  display: grid;
+  padding: 2rem;
+  gap: 2.5rem;
   grid-template-columns: repeat(3, 1fr);
-  padding: 1rem;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -19,6 +24,5 @@
     gap: 1.5rem;
 
     box-shadow: 10px 10px 10px rgb(170, 169, 169);
-    
   }
 }
