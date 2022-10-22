@@ -4,8 +4,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
   min-height: 100vh;
+  gap: 1rem;
 }
 
 .cont-img-image {
@@ -65,15 +65,16 @@ strong {
   margin-top: 1.5rem;
 }
 
-.arrowDown{
-  transition: .3s color ease;
+.arrowDown {
+  transition: 0.3s color ease;
 }
 
-.arrowDown:hover{
-color: #97b68f;
+.arrowDown:hover {
+  color: #97b68f;
 }
 
-@media screen and (min-width: 768px)  {
+@media screen and (min-width: 768px) {
+ 
   .cont-img {
     width: 10%;
   }

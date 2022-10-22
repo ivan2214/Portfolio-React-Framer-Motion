@@ -1,25 +1,17 @@
 .navDontSticky {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  gap: 1.5rem;
-  width: 100%;
-  padding: 1rem;
-  transition: 1s ease;
-  background-color: beige;
+  visibility: hidden;
+  overflow: hidden;
+  transition: all 1s;
 }
 
 .stickyNav {
-  width: 100%;
-  transition: 1s ease;
-  backdrop-filter: blur(8px);
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   margin: 0 auto;
+  visibility: visible;
+  transition: all 1s;
 }
 
 .navHamburger {
@@ -29,20 +21,45 @@
   right: 0;
   padding: 1rem;
   cursor: pointer;
+  z-index: 110;
+  transition: all 1s;
 }
 
 .logo {
   visibility: hidden;
+  width: 0;
 }
 
 .nav-container-links {
-  width: 100%;
+  visibility: hidden;
+  display: flex;
+  align-items: stretch;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(100px);
+  opacity: 0;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  transition: all 1s;
+}
+.closeMenu {
+  flex-direction: column;
+  height: 0;
+  transition: all 1s;
+}
+
+.openMenu {
+  visibility: visible;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
-  backdrop-filter: blur(0.8);
+  min-height: 100vh;
+  transform: translateX(0px);
+  opacity: 1;
+  overflow: visible;
+  transition: all 1s;
+  z-index: 110;
 }
 
 .nav-link {
@@ -78,6 +95,7 @@
     width: 100%;
     padding: 1rem;
     transition: 1s ease;
+    visibility: visible;
   }
 
   .nav-container-links {

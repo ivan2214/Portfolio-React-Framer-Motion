@@ -4,7 +4,7 @@ import logo from "../../assets/img/codigo.png";
 import { Button } from "../Button/Button";
 import "./Nav.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faHamburger } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faHamburger, faX } from "@fortawesome/free-solid-svg-icons";
 
 const Nav = () => {
   const [hidden, setHidden] = useState(false);
@@ -21,9 +21,18 @@ const Nav = () => {
 
   return (
     <>
-      <nav className={hidden ? "navDontSticky stickyNav" : "navDontSticky"}>
-        <section className="navHamburger" onClick={() => setOpen(!open)}>
-          <FontAwesomeIcon icon={faBars} size="2xl" />
+      <nav
+        className={hidden && open ? "navDontSticky stickyNav" : "navDontSticky"}
+      >
+        <section
+          className="navHamburger transition duration-150"
+          onClick={() => setOpen(!open)}
+        >
+          {open ? (
+            <FontAwesomeIcon icon={faX} size="2xl" />
+          ) : (
+            <FontAwesomeIcon icon={faBars} size="2xl" />
+          )}
         </section>
 
         <section className={`w-10 logo `}>
@@ -52,7 +61,7 @@ const Nav = () => {
           </li>
           <li className="nav-item">
             <a href="#contacto" className="nav-link button-contacto">
-              <Button text="Contactemos" />
+              <Button text="Conectemos" />
             </a>
           </li>
         </ul>
