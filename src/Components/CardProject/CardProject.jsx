@@ -5,7 +5,15 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { AnimatePresence, motion } from "framer-motion";
 
-const CardProject = ({ url,gitHub, description, image, name, id, tecnology }) => {
+const CardProject = ({
+  url,
+  gitHub,
+  description,
+  image,
+  name,
+  id,
+  tecnology,
+}) => {
   const list = {
     hidden: { opacity: 0 },
 
@@ -24,17 +32,12 @@ const CardProject = ({ url,gitHub, description, image, name, id, tecnology }) =>
     show: { opacity: 1 },
   };
 
-  /*
-  PARA LAS SKILLS
-  initial={{ rotateY: -100, opacity: 0 }}
-        whileInView={{ rotateY: 0, opacity: 1 }} */
-
   return (
     <>
       <motion.div
-       transition={{ duration: 1.5 }}
-       initial={{ opacity: 0, translateX: -100 }}
-       whileInView={{ opacity: 1, translateX: 0 }}
+        transition={{ duration: 1.5 }}
+        initial={{ opacity: 0, translateX: -100 }}
+        whileInView={{ opacity: 1, translateX: 0 }}
         className="card"
       >
         <motion.section className="card-cont-img">
@@ -57,9 +60,7 @@ const CardProject = ({ url,gitHub, description, image, name, id, tecnology }) =>
           </motion.section>
           <motion.section className="card-buttons">
             <motion.ul
-              initial="hidden"
-              animate="show"
-              variants={list}
+            
               className="social-media"
             >
               <motion.li variants={item}>
