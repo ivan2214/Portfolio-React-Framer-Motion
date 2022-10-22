@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 import logo from "../../assets/img/codigo.png";
 import { Button } from "../Button/Button";
 import "./Nav.css";
@@ -33,7 +33,7 @@ const Nav = () => {
         when: "afterChildren",
       },
     },
-  }
+  };
 
   const item = {
     visible: { opacity: 1, x: 0 },
@@ -44,22 +44,20 @@ const Nav = () => {
     <>
       <nav className="navDontSticky stickyNav transition-all duration-700">
         <section
-          className="navHamburger transition duration-150"
+          className="navHamburger transition-all "
           onClick={() => setOpen(!open)}
         >
-          {open ? (
-            <FontAwesomeIcon
-              className="transition-all duration-500 ease-in"
-              icon={faX}
-              size="2xl"
-            />
-          ) : (
-            <FontAwesomeIcon
-              className="transition-all duration-500 ease-in"
-              icon={faBars}
-              size="2xl"
-            />
-          )}
+          <FontAwesomeIcon
+            className={` ${open ? "iconOpen" : "iconClose"}  `}
+            icon={faX}
+            size="2xl"
+          />
+
+          <FontAwesomeIcon
+            className={` ${open ? "iconClose" : "iconOpen"} `}
+            icon={faBars}
+            size="2xl"
+          />
         </section>
 
         <section className={`w-10 logo `}>
