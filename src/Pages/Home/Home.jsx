@@ -8,20 +8,35 @@ import Contacto from "../Contacto/Contacto";
 import Projects from "../Projects/Projects";
 import Skills from "../Skills/Skills";
 import "./Home.css";
+import { useEffect, useState } from "react";
+import Spinner from "../../Components/Spinner/Spinner";
 
 const Home = () => {
-  return (
-    <section className="cont-superior">
-      <Scroll />
-      <Nav />
+  const [loading, setLoading] = useState(true);
 
-      <NavUp />
-      <Header />
-      <Projects />
-      <Skills />
-      <About />
-      <Contacto />
-    </section>
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
+  return (
+    <>
+      {loading ? (
+        <Spinner />
+      ) : (
+        <section className="cont-superior">
+          <Scroll />
+          <Nav />
+          <NavUp />
+          <Header />
+          <Projects />
+          <Skills />
+          <About />
+          <Contacto />
+        </section>
+      )}
+    </>
   );
 };
 
