@@ -7,3 +7,7 @@
   align-items: center;
   justify-content: center;
 }
+
+.cont-skills{
+  grid-template-columns: repeat(2,1fr);
+}

@@ -12,7 +12,7 @@ const SkillCard = ({ skill, icon }) => {
     >
       <motion.img
         transition={{ duration: 2 }}
-        className="w-24"
+        className="w-24 image-skills"
         src={icon}
         alt={skill}
       />

@@ -22,7 +22,7 @@ const Skills = () => {
         Skills
       </motion.h3>
 
-      <section className="grid w-100 sm:grid-cols-2  md:grid-cols-2 xl:grid-cols-3 gap-24  items-center justify-center cont-skills">
+      <section className="grid w-100 sm:grid-cols-2  md:grid-cols-3 xl:grid-cols-4 gap-24  items-center justify-center cont-skills">
         {skills.map((skill) => (
           <SkillCard key={skill.id} skill={skill.skill} icon={skill.icon} />
         ))}

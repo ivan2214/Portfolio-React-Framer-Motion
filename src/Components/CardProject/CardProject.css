@@ -99,8 +99,8 @@
 .card-info {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 1rem;
   justify-content: center;
   width: 100%;
   text-align: center;
@@ -108,7 +108,7 @@
 }
 
 .title {
-  font-size: 1.5em;
+  font-size: 1.9rem;
   font-weight: 700;
 }
 
@@ -116,7 +116,6 @@
   letter-spacing: 1px;
   font-size: 0.9em;
   font-weight: 300;
-  
 }
 
 ul {
@@ -133,6 +132,6 @@ ul {
 
 @media screen and (min-width: 920px) {
   .card {
-    height: 390px;
+    height: 490px;
   }
 }

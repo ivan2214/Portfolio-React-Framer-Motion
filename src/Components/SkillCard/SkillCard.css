@@ -6,3 +6,12 @@ article {
   justify-content: center;
   gap: 1.5rem;
 }
+
+.cont-img-skills{
+  width: 100%;
+}
+
+
+.image-skills{
+  width: 50%;
+}

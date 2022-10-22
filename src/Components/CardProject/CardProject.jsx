@@ -39,7 +39,7 @@ const CardProject = ({ url,gitHub, description, image, name, id, tecnology }) =>
       >
         <motion.section className="card-cont-img">
           <motion.figure className="card-img">
-            <a href={url}>
+            <a href={url} target="blanck">
               {" "}
               <motion.img
                 src={image}

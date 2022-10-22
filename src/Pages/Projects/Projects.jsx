@@ -31,8 +31,8 @@ const Projects = () => {
       name: "App De Lista de tareas",
       image: todoList,
       tecnology: "React ChakraIu Css HTML",
-      url: "https://app-de-pelis.netlify.app/",
-      gitHub: "https://github.com/ivan2214/App-De-Pelis",
+      url: "https://tareas-ivan.netlify.app",
+      gitHub: "https://github.com/ivan2214/Todo-List",
     },
     {
       id: "3",
@@ -41,8 +41,8 @@ const Projects = () => {
       name: "App De Rick and Morty",
       image: imgRick,
       tecnology: "React ChakraIu Css HTML",
-      url: "https://app-de-pelis.netlify.app/",
-      gitHub: "https://github.com/ivan2214/App-De-Pelis",
+      url: "https://rick-and-morty-ivan.netlify.app",
+      gitHub: "https://github.com/ivan2214/RickAndMorty-Api-Practica-con-React-",
     },
     {
       id: "4",
@@ -51,8 +51,8 @@ const Projects = () => {
       name: "App de SpaceX",
       image: spaceX,
       tecnology: "React ChakraIu Css HTML",
-      url: "https://app-de-pelis.netlify.app/",
-      gitHub: "https://github.com/ivan2214/App-De-Pelis",
+      url: "https://misiones-space-x.netlify.app",
+      gitHub: "https://github.com/ivan2214/React-SapceX-Api",
     },
   ];
 
