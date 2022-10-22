@@ -62,7 +62,7 @@ const Projects = () => {
      
     >
       <motion.h3
-        transition={{ duration: 1 }}
+        transition={{ duration: 1.5 }}
         initial={{ opacity: 0, translateX: -100 }}
         whileInView={{ opacity: 1, translateX: 0 }}
         className="text-4xl capitalize font-bold"

@@ -32,7 +32,7 @@ const CardProject = ({ url,gitHub, description, image, name, id, tecnology }) =>
   return (
     <>
       <motion.div
-       transition={{ duration: 1 }}
+       transition={{ duration: 1.5 }}
        initial={{ opacity: 0, translateX: -100 }}
        whileInView={{ opacity: 1, translateX: 0 }}
         className="card"
