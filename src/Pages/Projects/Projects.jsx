@@ -74,7 +74,7 @@ const Projects = () => {
         Projects
       </motion.h3>
 
-      <section className="projects-cont-cards ">
+      <motion.section className="projects-cont-cards ">
         {informacion.map((info) => (
           <CardProject
             url={info.url}
@@ -87,7 +87,7 @@ const Projects = () => {
             gitHub={info.gitHub}
           />
         ))}
-      </section>
+      </motion.section>
     </motion.section>
   );
 };
