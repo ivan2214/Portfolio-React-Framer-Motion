@@ -79,30 +79,61 @@
 
 @media screen and (min-width: 1024px) {
   .navDontSticky {
-    min-height: auto;
+    visibility: visible;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
-    gap: 1.5rem;
     width: 100%;
-    padding: 1rem;
-    transition: 1s ease;
-    visibility: visible;
   }
 
-  .nav-container-links {
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 1.5rem;
-    backdrop-filter: blur(0.8);
+  .stickyNav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    visibility: visible;
   }
 
   .navHamburger {
-    visibility: hidden;
+    display: none;
   }
+
   .logo {
     visibility: visible;
+    max-width: 10%;
+    width: 8%;
+    padding: 1.5rem;
+  }
+
+  .personal {
+    width: 100%;
+    transition: all 1s ease;
+  }
+
+  .personal:hover{
+    transform: rotateZ(360deg);
+    transition: all 1s ease;
+  }
+
+  .nav-container-links {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 1.5rem;
+    transform: translateX(0);
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem;
+  }
+
+  .closeMenu {
+    flex-direction: row;
+    height: auto;
   }
 }

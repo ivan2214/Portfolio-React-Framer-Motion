@@ -10,7 +10,7 @@ const Nav = () => {
   const [hidden, setHidden] = useState(false);
   const [open, setOpen] = useState(false);
   function scroll() {
-    if (window.scrollY >= 100) {
+    if (window.scrollY > 0) {
       setHidden(true);
     } else {
       setHidden(false);
@@ -21,28 +21,36 @@ const Nav = () => {
 
   return (
     <>
-      <nav
-        className={hidden && open ? "navDontSticky stickyNav" : "navDontSticky"}
-      >
+      <nav className="navDontSticky stickyNav transition-all duration-700">
         <section
           className="navHamburger transition duration-150"
           onClick={() => setOpen(!open)}
         >
           {open ? (
-            <FontAwesomeIcon className="transition-all duration-500 ease-in" icon={faX} size="2xl" />
+            <FontAwesomeIcon
+              className="transition-all duration-500 ease-in"
+              icon={faX}
+              size="2xl"
+            />
           ) : (
-            <FontAwesomeIcon className="transition-all duration-500 ease-in" icon={faBars} size="2xl" />
+            <FontAwesomeIcon
+              className="transition-all duration-500 ease-in"
+              icon={faBars}
+              size="2xl"
+            />
           )}
         </section>
 
         <section className={`w-10 logo `}>
           <a href="#">
             {" "}
-            <img src={logo} alt="logo personal" />
+            <img src={logo} alt="logo personal" className="personal" />
           </a>
         </section>
         <ul
-          className={`nav-container-links transition-all duration-500 ease-in ${open ? "openMenu" : "closeMenu"} `}
+          className={`nav-container-links transition-all duration-500 ease-in ${
+            open ? "openMenu" : "closeMenu"
+          } `}
         >
           <li className="nav-item duration-500">
             <a href="#projects" className="nav-link">
