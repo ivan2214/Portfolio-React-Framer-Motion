@@ -1,7 +1,6 @@
 .navDontSticky {
   visibility: hidden;
   overflow: hidden;
-  transition: all 1s;
 }
 
 .stickyNav {
@@ -11,7 +10,6 @@
   left: 0;
   margin: 0 auto;
   visibility: visible;
-  transition: all 1s;
 }
 
 .navHamburger {
@@ -22,7 +20,6 @@
   padding: 1rem;
   cursor: pointer;
   z-index: 110;
-  transition: all 1s;
 }
 
 .logo {
@@ -37,15 +34,14 @@
   align-items: center;
   justify-content: center;
   transform: translateX(100px);
-  opacity: 0;
-  overflow: hidden;
-  backdrop-filter: blur(8px);
   transition: all 1s;
+  background-color: rgba(255, 255, 255, 0.555);
+  backdrop-filter: blur(8px);
+  z-index: 100;
 }
 .closeMenu {
   flex-direction: column;
   height: 0;
-  transition: all 1s;
 }
 
 .openMenu {
@@ -56,10 +52,7 @@
   justify-content: center;
   min-height: 100vh;
   transform: translateX(0px);
-  opacity: 1;
-  overflow: visible;
   transition: all 1s;
-  z-index: 110;
 }
 
 .nav-link {

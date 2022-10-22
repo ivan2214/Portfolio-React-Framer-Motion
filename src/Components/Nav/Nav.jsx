@@ -29,9 +29,9 @@ const Nav = () => {
           onClick={() => setOpen(!open)}
         >
           {open ? (
-            <FontAwesomeIcon icon={faX} size="2xl" />
+            <FontAwesomeIcon className="transition-all duration-500 ease-in" icon={faX} size="2xl" />
           ) : (
-            <FontAwesomeIcon icon={faBars} size="2xl" />
+            <FontAwesomeIcon className="transition-all duration-500 ease-in" icon={faBars} size="2xl" />
           )}
         </section>
 
@@ -42,24 +42,24 @@ const Nav = () => {
           </a>
         </section>
         <ul
-          className={`nav-container-links ${open ? "openMenu" : "closeMenu"} `}
+          className={`nav-container-links transition-all duration-500 ease-in ${open ? "openMenu" : "closeMenu"} `}
         >
-          <li className="nav-item">
+          <li className="nav-item duration-500">
             <a href="#projects" className="nav-link">
               Projects
             </a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item duration-500">
             <a href="#skills" className="nav-link">
               skills
             </a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item duration-500">
             <a href="#about" className="nav-link">
               About
             </a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item duration-500">
             <a href="#contacto" className="nav-link button-contacto">
               <Button text="Conectemos" />
             </a>
