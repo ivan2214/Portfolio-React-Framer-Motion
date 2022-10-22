@@ -34,9 +34,9 @@ const Skills = () => {
       </motion.h3>
 
       <motion.section
-        variants={container}
-        initial="hidden"
-        animate="visible"
+        transition={{ duration: 1.5 }}
+        initial={{ opacity: 0, translateX: -100 }}
+        whileInView={{ opacity: 1, translateX: 0 }}
         className="grid w-100 sm:grid-cols-2  md:grid-cols-3 xl:grid-cols-4 gap-24  items-center justify-center cont-skills"
       >
         {skills.map((skill) => (

@@ -8,6 +8,17 @@
   justify-content: center;
 }
 
-.cont-skills{
-  grid-template-columns: repeat(2,1fr);
+.cont-skills {
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .cont-skills {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+
+    box-shadow: 10px 10px 10px rgb(170, 169, 169);
+    
+  }
 }

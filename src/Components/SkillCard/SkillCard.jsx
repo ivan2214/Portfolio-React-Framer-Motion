@@ -24,7 +24,7 @@ const SkillCard = ({ skill, icon }) => {
         src={icon}
         alt={skill}
       />
-      <h3 className="text-xl font-medium">{skill}</h3>
+      <h3 className="text-xl text-tecnology font-medium">{skill}</h3>
     </motion.article>
   );
 };

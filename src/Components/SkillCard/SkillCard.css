@@ -1,17 +1,34 @@
-article {
+.cont-img-skills {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
+  filter: drop-shadow(10px 10px  8px rgb(170, 169, 169));
 }
 
-.cont-img-skills{
+.cont-img-skills {
   width: 100%;
 }
 
-
-.image-skills{
+.image-skills {
   width: 50%;
+}
+
+.text-tecnology{
+  filter: drop-shadow(10px 10px  8px rgb(170, 169, 169));
+}
+
+@media screen and (min-width: 768px) {
+  .cont-img-skills {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: fit-content;
+    filter: drop-shadow(10px 10px  8px rgb(170, 169, 169));
+    padding: 1rem;
+  }
+  .image-skills {
+    width: 20%;
+  }
 }
