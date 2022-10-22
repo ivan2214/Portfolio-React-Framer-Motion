@@ -42,7 +42,8 @@ const Projects = () => {
       image: imgRick,
       tecnology: "React ChakraIu Css HTML",
       url: "https://rick-and-morty-ivan.netlify.app",
-      gitHub: "https://github.com/ivan2214/RickAndMorty-Api-Practica-con-React-",
+      gitHub:
+        "https://github.com/ivan2214/RickAndMorty-Api-Practica-con-React-",
     },
     {
       id: "4",
@@ -56,11 +57,29 @@ const Projects = () => {
     },
   ];
 
+  const list = {
+    visible: {
+      opacity: 1,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.3,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      transition: {
+        when: "afterChildren",
+      },
+    },
+  };
+
+  const item = {
+    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, x: -100 },
+  };
+
   return (
-    <motion.section
-      id="projects"
-     
-    >
+    <motion.section id="projects">
       <motion.h3
         transition={{ duration: 1.5 }}
         initial={{ opacity: 0, translateX: -100 }}
@@ -74,9 +93,16 @@ const Projects = () => {
         Projects
       </motion.h3>
 
-      <motion.section className="projects-cont-cards ">
+      <motion.section
+        initial="hidden"
+        animate="visible"
+        variants={list}
+        transition={{ duration: 1.5 }}
+        className="projects-cont-cards "
+      >
         {informacion.map((info) => (
           <CardProject
+            item={item}
             url={info.url}
             description={info.description}
             id={info.id}

@@ -13,10 +13,12 @@ const CardProject = ({
   name,
   id,
   tecnology,
+  item,
 }) => {
   const list = {
+    initial: { translateX: -100 },
     hidden: { opacity: 0 },
-
+    whileInView: { translateX: 0 },
     show: {
       opacity: 1,
       transition: {
@@ -26,20 +28,9 @@ const CardProject = ({
     },
   };
 
-  const item = {
-    hidden: { opacity: 0 },
-
-    show: { opacity: 1 },
-  };
-
   return (
     <>
-      <motion.div
-        transition={{ duration: 1.5 }}
-        initial={{ opacity: 0, translateX: -100 }}
-        whileInView={{ opacity: 1, translateX: 0 }}
-        className="card"
-      >
+      <motion.div variants={item} className="card duration-500">
         <motion.section className="card-cont-img">
           <motion.figure className="card-img">
             <a href={url} target="blanck">
@@ -59,10 +50,7 @@ const CardProject = ({
             <motion.p className="subtitle">{tecnology}</motion.p>
           </motion.section>
           <motion.section className="card-buttons">
-            <motion.ul
-            
-              className="social-media"
-            >
+            <motion.ul className="social-media">
               <motion.li variants={item}>
                 <a href={url} target="BLANCK">
                   <FontAwesomeIcon

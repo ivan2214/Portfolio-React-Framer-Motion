@@ -1,6 +1,6 @@
 import Header from "../../Components/Header/Header";
 import Nav from "../../Components/Nav/Nav";
-import NavRedes from "../../Components/NavRedes/NavRedes";
+
 import NavUp from "../../Components/navUp/NavUp";
 import Scroll from "../../Components/Scroll/Scroll";
 import About from "../About/About";
@@ -12,15 +12,15 @@ import "./Home.css";
 const Home = () => {
   return (
     <section className="cont-superior">
-      <Scroll/>
+      <Scroll />
       <Nav />
-      <NavRedes />
+
       <NavUp />
       <Header />
       <Projects />
       <Skills />
       <About />
-      <Contacto/>
+      <Contacto />
     </section>
   );
 };
