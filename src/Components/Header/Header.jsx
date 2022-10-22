@@ -11,7 +11,8 @@ const Header = () => {
     <header className="cont">
       <figure className="cont-img ">
         <motion.img
-          
+          animate={{ duration: 2, rotateZ: "180deg" }}
+          exit={{ rotateZ: 0 }}
           src={img}
           className="cont-img-image "
           alt=""
