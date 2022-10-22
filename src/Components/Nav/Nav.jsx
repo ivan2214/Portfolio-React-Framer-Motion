@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import {motion} from "framer-motion"
 import logo from "../../assets/img/codigo.png";
 import { Button } from "../Button/Button";
 import "./Nav.css";
@@ -18,6 +18,27 @@ const Nav = () => {
   }
 
   window.addEventListener("scroll", scroll);
+
+  const list = {
+    visible: {
+      opacity: 1,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.3,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      transition: {
+        when: "afterChildren",
+      },
+    },
+  }
+
+  const item = {
+    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, x: -100 },
+  };
 
   return (
     <>
@@ -47,32 +68,35 @@ const Nav = () => {
             <img src={logo} alt="logo personal" className="personal" />
           </a>
         </section>
-        <ul
+        <motion.ul
+          initial="hidden"
+          animate="visible"
+          variants={list}
           className={`nav-container-links transition-all duration-500 ease-in ${
             open ? "openMenu" : "closeMenu"
           } `}
         >
-          <li className="nav-item duration-500">
+          <motion.li variants={item} className="nav-item duration-500">
             <a href="#projects" className="nav-link">
               Projects
             </a>
-          </li>
-          <li className="nav-item duration-500">
+          </motion.li>
+          <motion.li variants={item} className="nav-item duration-500">
             <a href="#skills" className="nav-link">
               skills
             </a>
-          </li>
-          <li className="nav-item duration-500">
+          </motion.li>
+          <motion.li variants={item} className="nav-item duration-500">
             <a href="#about" className="nav-link">
               About
             </a>
-          </li>
-          <li className="nav-item duration-500">
+          </motion.li>
+          <motion.li variants={item} className="nav-item duration-500">
             <a href="#contacto" className="nav-link button-contacto">
               <Button text="Conectemos" />
             </a>
-          </li>
-        </ul>
+          </motion.li>
+        </motion.ul>
       </nav>
     </>
   );
