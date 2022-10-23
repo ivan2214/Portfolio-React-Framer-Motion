@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import NavRedes from "../../Components/NavRedes/NavRedes";
+import "./Contacto.css"
 
 const Contacto = () => {
   return (
-    <div>Contacto</div>
-  )
-}
+    <section id="contacto">
+      <NavRedes />
+    </section>
+  );
+};
 
-export default Contacto
+export default Contacto;

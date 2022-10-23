@@ -1,6 +1,6 @@
 import Header from "../../Components/Header/Header";
 import Nav from "../../Components/Nav/Nav";
-import NavRedes from "../../Components/NavRedes/NavRedes";
+
 import NavUp from "../../Components/navUp/NavUp";
 import Scroll from "../../Components/Scroll/Scroll";
 import About from "../About/About";
@@ -8,20 +8,35 @@ import Contacto from "../Contacto/Contacto";
 import Projects from "../Projects/Projects";
 import Skills from "../Skills/Skills";
 import "./Home.css";
+import { useEffect, useState } from "react";
+import Spinner from "../../Components/Spinner/Spinner";
 
 const Home = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
   return (
-    <section className="cont-superior">
-      <Scroll/>
-      <Nav />
-      <NavRedes />
-      <NavUp />
-      <Header />
-      <Projects />
-      <Skills />
-      <About />
-      <Contacto/>
-    </section>
+    <>
+      {loading ? (
+        <Spinner />
+      ) : (
+        <section className="cont-superior">
+          <Scroll />
+          <Nav />
+          <NavUp />
+          <Header />
+          <Projects />
+          <Skills />
+          <About />
+          <Contacto />
+        </section>
+      )}
+    </>
   );
 };
 

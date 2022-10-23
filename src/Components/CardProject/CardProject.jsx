@@ -13,33 +13,27 @@ const CardProject = ({
   name,
   id,
   tecnology,
+  item,
 }) => {
   const list = {
-    hidden: { opacity: 0 },
-
-    show: {
+    visible: {
       opacity: 1,
       transition: {
-        duration: 0.5,
-        delayChildren: 0.5,
+        when: "beforeChildren",
+        staggerChildren: 0.3,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      transition: {
+        when: "afterChildren",
       },
     },
   };
 
-  const item = {
-    hidden: { opacity: 0 },
-
-    show: { opacity: 1 },
-  };
-
   return (
     <>
-      <motion.div
-        transition={{ duration: 1.5 }}
-        initial={{ opacity: 0, translateX: -100 }}
-        whileInView={{ opacity: 1, translateX: 0 }}
-        className="card"
-      >
+      <motion.div variants={item} className="card duration-500">
         <motion.section className="card-cont-img">
           <motion.figure className="card-img">
             <a href={url} target="blanck">
@@ -60,7 +54,10 @@ const CardProject = ({
           </motion.section>
           <motion.section className="card-buttons">
             <motion.ul
-            
+            initial="hidden"
+            animate="visible"
+            variants={list}
+            transition={{ duration: 1.5 }}
               className="social-media"
             >
               <motion.li variants={item}>

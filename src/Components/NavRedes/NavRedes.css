@@ -1,38 +1,22 @@
-.nav-links {
+.nav-linksRedes {
   display: flex;
-  flex-direction: row;
+  flex-direction: r;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  right: 0;
+  width: fit-content;
   padding: 1.5rem;
   gap: 2.5rem;
-  z-index: 10;
-  visibility: hidden;
+
+  visibility: visible;
 }
 
-.nav-link {
+.nav-itemRedes {
   transition: 0.3s color ease;
 }
 
-.nav-link:hover {
+.nav-itemRedes:hover {
   color: #8d8c8d;
 }
 
 @media screen and (min-width: 980px) {
-  .nav-links {
-    flex-direction: column;
-    justify-content: center;
-    position: fixed;
-    width: fit-content;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    padding: 1.5rem;
-    gap: 2.5rem;
-    z-index: 10;
-    visibility: visible;
-  }
 }

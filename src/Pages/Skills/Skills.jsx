@@ -7,15 +7,25 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
 
 const Skills = () => {
-  const container = {
+  const list = {
     visible: {
       opacity: 1,
-      scale: 1,
       transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2,
+        when: "beforeChildren",
+        staggerChildren: 0.3,
       },
     },
+    hidden: {
+      opacity: 0,
+      transition: {
+        when: "afterChildren",
+      },
+    },
+  };
+
+  const item = {
+    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, x: -100 },
   };
 
   return (
@@ -34,13 +44,15 @@ const Skills = () => {
       </motion.h3>
 
       <motion.section
+        initial="hidden"
+        animate="visible"
+        variants={list}
         transition={{ duration: 1.5 }}
-        initial={{ opacity: 0, translateX: -100 }}
-        whileInView={{ opacity: 1, translateX: 0 }}
+        
         className="grid items-center justify-center cont-skills"
       >
         {skills.map((skill) => (
-          <SkillCard key={skill.id} skill={skill.skill} icon={skill.icon} />
+          <SkillCard item={item} key={skill.id} skill={skill.skill} icon={skill.icon} />
         ))}
       </motion.section>
     </section>
