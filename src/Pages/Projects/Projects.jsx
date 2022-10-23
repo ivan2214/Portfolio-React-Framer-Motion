@@ -11,8 +11,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import informacion from "../../utils/informacion";
 const Projects = () => {
-
-
   const list = {
     visible: {
       opacity: 1,
