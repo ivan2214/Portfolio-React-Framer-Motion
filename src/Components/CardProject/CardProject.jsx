@@ -16,14 +16,17 @@ const CardProject = ({
   item,
 }) => {
   const list = {
-    initial: { translateX: -100 },
-    hidden: { opacity: 0 },
-    whileInView: { translateX: 0 },
-    show: {
+    visible: {
       opacity: 1,
       transition: {
-        duration: 0.5,
-        delayChildren: 0.5,
+        when: "beforeChildren",
+        staggerChildren: 0.3,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      transition: {
+        when: "afterChildren",
       },
     },
   };
@@ -50,7 +53,13 @@ const CardProject = ({
             <motion.p className="subtitle">{tecnology}</motion.p>
           </motion.section>
           <motion.section className="card-buttons">
-            <motion.ul className="social-media">
+            <motion.ul
+            initial="hidden"
+            animate="visible"
+            variants={list}
+            transition={{ duration: 1.5 }}
+              className="social-media"
+            >
               <motion.li variants={item}>
                 <a href={url} target="BLANCK">
                   <FontAwesomeIcon
