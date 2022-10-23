@@ -1,14 +1,14 @@
 import React from "react";
 import CardProject from "../../Components/CardProject/CardProject";
 import "./Projects.css";
+import imgRick from "../../assets/Projects/ricky.png";
+import spaceX from "../../assets/Projects/SpaceX.png";
+import todoList from "../../assets/Projects/Todolist.png";
+import peliculas from "../../assets/Projects/peliculas.png";
 
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFolderOpen } from "@fortawesome/free-solid-svg-icons";
-import imgRick from "../../assets/projects/ricky.png";
-import spaceX from "../../assets/Projects/SpaceX.png";
-import todoList from "../../assets/Projects/Todolist.png";
-import peliculas from "../../assets/Projects/peliculas.png";
 
 const Projects = () => {
   const informacion = [
