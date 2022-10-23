@@ -30,7 +30,7 @@ const Home = () => {
           <Nav />
           <NavUp />
           <Header />
-
+          <Projects />
           <Skills />
           <About />
           <Contacto />
