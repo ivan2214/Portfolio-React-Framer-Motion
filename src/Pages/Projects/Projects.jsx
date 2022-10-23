@@ -4,12 +4,9 @@ import "./Projects.css";
 
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCode,
-  faFolder,
-  faFolderOpen,
-} from "@fortawesome/free-solid-svg-icons";
+import { faFolderOpen } from "@fortawesome/free-solid-svg-icons";
 import informacion from "../../utils/informacion";
+
 const Projects = () => {
   const list = {
     visible: {
