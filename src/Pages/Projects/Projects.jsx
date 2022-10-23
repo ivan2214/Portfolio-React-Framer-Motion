@@ -87,7 +87,7 @@ const Projects = () => {
         <FontAwesomeIcon
           icon={faFolderOpen}
           style={{ color: "rgb(151, 182, 143)" }}
-        />{" "}
+        />
         Projects
       </motion.h3>
 
