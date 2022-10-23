@@ -52,7 +52,7 @@ const Projects = () => {
         transition={{ duration: 4.5, delay: 600 }}
         className="projects-cont-cards "
       >
-        {informacion.map((info) => (
+        {informacion?.map((info) => (
           <CardProject
             item={item}
             url={info.url}
