@@ -16,7 +16,6 @@
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "devicon": "^2.15.1",
     "framer-motion": "^7.5.4",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
