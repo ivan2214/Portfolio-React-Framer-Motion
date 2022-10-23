@@ -9,7 +9,7 @@ import {
   faFolder,
   faFolderOpen,
 } from "@fortawesome/free-solid-svg-icons";
-import informacion from "../../utils/images";
+import informacion from "../../utils/informacion";
 const Projects = () => {
 
 
