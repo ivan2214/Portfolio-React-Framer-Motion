@@ -42,8 +42,12 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="navDontSticky stickyNav transition-all duration-700">
-        <section
+      <motion.nav
+        initial={{ opacity: 0, translateX: -200 }}
+        animate={{ opacity: 1, translateX: 0 }}
+        className="navDontSticky stickyNav transition-all duration-700"
+      >
+        <motion.section
           className="navHamburger transition-all "
           onClick={() => setOpen(!open)}
         >
@@ -58,14 +62,14 @@ const Nav = () => {
             icon={faBars}
             size="2xl"
           />
-        </section>
+        </motion.section>
 
-        <section className={`w-10 logo `}>
+        <motion.section className={`w-10 logo `}>
           <a href="#">
             {" "}
             <img src={logo} alt="logo personal" className="personal" />
           </a>
-        </section>
+        </motion.section>
         <motion.ul
           initial="hidden"
           animate="visible"
@@ -95,7 +99,7 @@ const Nav = () => {
             </a>
           </motion.li>
         </motion.ul>
-      </nav>
+      </motion.nav>
     </>
   );
 };

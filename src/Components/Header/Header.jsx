@@ -12,7 +12,8 @@ const Header = () => {
       <figure className="cont-img ">
         <motion.img
           transition={{ duration: 1.5 }}
-          initial={{ rotateZ: 0 }}
+          initial={{ opacity: 0, translateX: -200, rotateZ: 0 }}
+          whileInView={{ opacity: 1, translateX: 0 }}
           animate={{ rotateZ: 380 }}
           exit={{ rotateZ: 0 }}
           src={img}
@@ -20,13 +21,18 @@ const Header = () => {
           alt=""
         />
       </figure>
-      <section className="cont-texts">
+      <motion.section
+        transition={{ duration: 1.5 }}
+        initial={{ opacity: 0, translateX: -200 }}
+        whileInView={{ opacity: 1, translateX: 0 }}
+        className="cont-texts"
+      >
         <h1 className="text-5xl">Ivan Bongiovani </h1>
         <h3 className="text-2xl">Full Stack Developer</h3>
         <p>
           Especializado en el stack <strong>MERN</strong>
         </p>
-      </section>
+      </motion.section>
 
       <section className="cont-arrow">
         <a href="#projects" className="arrowDown">
