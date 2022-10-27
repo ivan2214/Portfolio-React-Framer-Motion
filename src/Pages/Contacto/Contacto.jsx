@@ -1,12 +1,18 @@
+import { motion } from "framer-motion";
 import React from "react";
 import NavRedes from "../../Components/NavRedes/NavRedes";
-import "./Contacto.css"
+import "./Contacto.css";
 
 const Contacto = () => {
   return (
-    <section id="contacto">
+    <motion.section
+      transition={{ duration: 1.5, delay: 1 }}
+      initial={{ opacity: 0, translateX: -200 }}
+      whileInView={{ opacity: 1, translateX: 0 }}
+      id="contacto"
+    >
       <NavRedes />
-    </section>
+    </motion.section>
   );
 };
 

@@ -33,7 +33,9 @@ const CardProject = ({
 
   return (
     <>
-      <motion.div variants={item} className="card duration-500">
+      <motion.div  transition={{ duration: 1.5, delay: .5 }}
+        initial={{ opacity: 0, translateX: -200 }}
+        whileInView={{ opacity: 1, translateX: 0 }} className="card duration-500">
         <motion.section className="card-cont-img">
           <motion.figure className="card-img">
             <a href={url} target="blanck">

@@ -1,7 +1,7 @@
 .navDontSticky {
   visibility: hidden;
   overflow: hidden;
-  backdrop-filter: blur(8px);
+  background-color: #fff;
   z-index: 100;
 }
 
@@ -96,6 +96,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    backdrop-filter: blur(8px);
   }
 
   .stickyNav {

@@ -44,10 +44,9 @@ const Skills = () => {
       </motion.h3>
 
       <motion.section
-        initial="hidden"
-        animate="visible"
-        variants={list}
-        transition={{ duration: 1.5 }}
+       transition={{ duration: 1.5, delay: .5 }}
+       initial={{ opacity: 0, translateX: -200 }}
+       whileInView={{ opacity: 1, translateX: 0 }} 
         
         className="grid items-center justify-center cont-skills"
       >

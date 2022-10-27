@@ -5,7 +5,6 @@ import imgRick from "../../assets/Projects/ricky.png";
 import spaceX from "../../assets/Projects/SpaceX.png";
 import todoList from "../../assets/Projects/Todolist.png";
 import peliculas from "../../assets/Projects/peliculas.png";
-
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFolderOpen } from "@fortawesome/free-solid-svg-icons";
@@ -77,9 +76,11 @@ const Projects = () => {
   };
 
   return (
-    <motion.section id="projects">
+    <motion.section transition={{ duration: 1.5, delay: .3 }}
+    initial={{ opacity: 0, translateX: -200 }}
+    whileInView={{ opacity: 1, translateX: 0 }}  id="projects">
       <motion.h3
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 1 }}
         initial={{ opacity: 0, translateX: -100 }}
         whileInView={{ opacity: 1, translateX: 0 }}
         className="text-4xl capitalize font-bold"
@@ -92,10 +93,7 @@ const Projects = () => {
       </motion.h3>
 
       <motion.section
-        initial="hidden"
-        animate="visible"
-        variants={list}
-        transition={{ duration: 4.5, delay: 600 }}
+       
         className="projects-cont-cards "
       >
         {informacion?.map((info) => (
