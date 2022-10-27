@@ -11,10 +11,13 @@ const Header = () => {
     <header className="cont">
       <figure className="cont-img ">
         <motion.img
-          transition={{ duration: 1.5 }}
+          /* transition={{ duration: 1.5 }}
           initial={{ opacity: 0, translateX: -200, rotateZ: 0 }}
           whileInView={{ opacity: 1, translateX: 0 }}
-          animate={{ rotateZ: 380 }}
+          animate={{ rotateZ: 380 }} */
+          transition={{ duration: 1.5 }}
+          initial={{ opacity: 0,translateX: -200, rotateZ: 0 }}
+          animate={{ opacity: 1, translateX: 0,rotateZ: 380 }}
           exit={{ rotateZ: 0 }}
           src={img}
           className="cont-img-image "
@@ -24,7 +27,7 @@ const Header = () => {
       <motion.section
         transition={{ duration: 1.5 }}
         initial={{ opacity: 0, translateX: -200 }}
-        whileInView={{ opacity: 1, translateX: 0 }}
+        animate={{ opacity: 1, translateX: 0 }}
         className="cont-texts"
       >
         <h1 className="text-5xl">Ivan Bongiovani </h1>

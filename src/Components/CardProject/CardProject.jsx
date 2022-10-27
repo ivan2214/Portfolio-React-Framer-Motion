@@ -33,9 +33,12 @@ const CardProject = ({
 
   return (
     <>
-      <motion.div  transition={{ duration: 1.5, delay: .5 }}
+      <motion.article
+        transition={{ duration: 1.5 }}
         initial={{ opacity: 0, translateX: -200 }}
-        whileInView={{ opacity: 1, translateX: 0 }} className="card duration-500">
+        whileInView={{ opacity: 1, translateX: 0 }}
+        className="card duration-500"
+      >
         <motion.section className="card-cont-img">
           <motion.figure className="card-img">
             <a href={url} target="blanck">
@@ -56,10 +59,10 @@ const CardProject = ({
           </motion.section>
           <motion.section className="card-buttons">
             <motion.ul
-            initial="hidden"
-            animate="visible"
-            variants={list}
-            transition={{ duration: 1.5 }}
+              initial="hidden"
+              animate="visible"
+              variants={list}
+              transition={{ duration: 1.5 }}
               className="social-media"
             >
               <motion.li variants={item}>
@@ -84,7 +87,7 @@ const CardProject = ({
             </motion.ul>
           </motion.section>
         </motion.section>
-      </motion.div>
+      </motion.article>
     </>
   );
 };

@@ -12,7 +12,7 @@ const Skills = () => {
       opacity: 1,
       transition: {
         when: "beforeChildren",
-        staggerChildren: 0.3,
+        staggerChildren: 0.5,
       },
     },
     hidden: {
@@ -24,12 +24,17 @@ const Skills = () => {
   };
 
   const item = {
-    visible: { opacity: 1, x: 0 },
-    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: -100 },
   };
 
   return (
-    <section id="skills">
+    <motion.section
+      transition={{ duration: 1.5 }}
+      initial={{ opacity: 0, translateX: -200 }}
+      whileInView={{ opacity: 1, translateX: 0 }}
+      id="skills"
+    >
       <motion.h3
         transition={{ duration: 1.5 }}
         initial={{ opacity: 0 }}
@@ -44,17 +49,21 @@ const Skills = () => {
       </motion.h3>
 
       <motion.section
-       transition={{ duration: 1.5, delay: .5 }}
-       initial={{ opacity: 0, translateX: -200 }}
-       whileInView={{ opacity: 1, translateX: 0 }} 
-        
+        initial="hidden"
+        animate="visible"
+        variants={list}
         className="grid items-center justify-center cont-skills"
       >
         {skills.map((skill) => (
-          <SkillCard item={item} key={skill.id} skill={skill.skill} icon={skill.icon} />
+          <SkillCard
+            item={item}
+            key={skill.id}
+            skill={skill.skill}
+            icon={skill.icon}
+          />
         ))}
       </motion.section>
-    </section>
+    </motion.section>
   );
 };
 

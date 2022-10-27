@@ -74,26 +74,24 @@ const Nav = () => {
           initial="hidden"
           animate="visible"
           variants={list}
-          className={`nav-container-links transition-all duration-500 ease-in ${
-            open ? "openMenu" : "closeMenu"
-          } `}
+          className={`nav-container-links  ${open ? "openMenu" : "closeMenu"} `}
         >
-          <motion.li variants={item} className="nav-item duration-500">
+          <motion.li variants={item} className="nav-item ">
             <a href="#projects" className="nav-link">
               Projects
             </a>
           </motion.li>
-          <motion.li variants={item} className="nav-item duration-500">
+          <motion.li variants={item} className="nav-item ">
             <a href="#skills" className="nav-link">
               skills
             </a>
           </motion.li>
-          <motion.li variants={item} className="nav-item duration-500">
+          <motion.li variants={item} className="nav-item ">
             <a href="#about" className="nav-link">
               About
             </a>
           </motion.li>
-          <motion.li variants={item} className="nav-item duration-500">
+          <motion.li variants={item} className="nav-item ">
             <a href="#contacto" className="nav-link button-contacto">
               <Button text="Conectemos" />
             </a>

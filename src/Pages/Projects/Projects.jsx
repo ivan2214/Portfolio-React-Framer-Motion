@@ -76,9 +76,7 @@ const Projects = () => {
   };
 
   return (
-    <motion.section transition={{ duration: 1.5, delay: .3 }}
-    initial={{ opacity: 0, translateX: -200 }}
-    whileInView={{ opacity: 1, translateX: 0 }}  id="projects">
+    <motion.section id="projects">
       <motion.h3
         transition={{ duration: 1 }}
         initial={{ opacity: 0, translateX: -100 }}
@@ -92,10 +90,7 @@ const Projects = () => {
         Projects
       </motion.h3>
 
-      <motion.section
-       
-        className="projects-cont-cards "
-      >
+      <motion.section className="projects-cont-cards ">
         {informacion?.map((info) => (
           <CardProject
             item={item}
