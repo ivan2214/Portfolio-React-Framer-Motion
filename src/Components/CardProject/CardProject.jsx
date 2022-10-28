@@ -43,7 +43,8 @@ const CardProject = ({
           <motion.figure className="card-img">
             <a href={url} target="blanck">
               {" "}
-              <motion.img
+              <img
+                loading="lazi"
                 src={image}
                 alt={description}
                 className="card-img-image"
