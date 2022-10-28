@@ -53,22 +53,6 @@ const Projects = () => {
       gitHub: "https://github.com/ivan2214/React-SapceX-Api",
     },
   ];
-  const list = {
-    visible: {
-      opacity: 1,
-      transition: {
-        when: "beforeChildren",
-        staggerChildren: 0.3,
-      },
-    },
-    hidden: {
-      opacity: 0,
-      transition: {
-        when: "afterChildren",
-        duration: 6,
-      },
-    },
-  };
 
   const item = {
     visible: { opacity: 1, x: 0 },
@@ -78,7 +62,7 @@ const Projects = () => {
   return (
     <section id="projects">
       <motion.h3
-        transition={{ duration: 1,ease: "linear" }}
+        transition={{ duration: 1, ease: "linear" }}
         initial={{ opacity: 0, translateX: -100 }}
         whileInView={{ opacity: 1, translateX: 0 }}
         className="text-4xl capitalize font-bold"

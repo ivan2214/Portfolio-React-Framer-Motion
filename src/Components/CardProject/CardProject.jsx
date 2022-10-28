@@ -20,7 +20,9 @@ const CardProject = ({
       opacity: 1,
       transition: {
         when: "beforeChildren",
-        staggerChildren: 0.3,
+        staggerChildren: 0.5,
+        duration: 1.5,
+        ease: "linear",
       },
     },
     hidden: {
@@ -65,7 +67,6 @@ const CardProject = ({
               initial="hidden"
               animate="visible"
               variants={list}
-              transition={{ duration: 1.5, ease: "linear" }}
               className="social-media"
             >
               <motion.li variants={item}>
