@@ -76,9 +76,9 @@ const Projects = () => {
   };
 
   return (
-    <motion.section id="projects">
+    <section id="projects">
       <motion.h3
-        transition={{ duration: 1 }}
+        transition={{ duration: 1,ease: "linear" }}
         initial={{ opacity: 0, translateX: -100 }}
         whileInView={{ opacity: 1, translateX: 0 }}
         className="text-4xl capitalize font-bold"
@@ -90,7 +90,7 @@ const Projects = () => {
         Projects
       </motion.h3>
 
-      <motion.section className="projects-cont-cards ">
+      <section className="projects-cont-cards ">
         {informacion?.map((info) => (
           <CardProject
             item={item}
@@ -104,8 +104,8 @@ const Projects = () => {
             gitHub={info.gitHub}
           />
         ))}
-      </motion.section>
-    </motion.section>
+      </section>
+    </section>
   );
 };
 

@@ -6,7 +6,7 @@ import "./Contacto.css";
 const Contacto = () => {
   return (
     <motion.section
-      transition={{ duration: 1.5, delay: 1 }}
+      transition={{ duration: 1.5 }}
       initial={{ opacity: 0, translateX: -200 }}
       whileInView={{ opacity: 1, translateX: 0 }}
       id="contacto"

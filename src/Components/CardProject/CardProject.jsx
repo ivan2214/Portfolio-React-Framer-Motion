@@ -34,13 +34,13 @@ const CardProject = ({
   return (
     <>
       <motion.article
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 1.5, ease: "linear" }}
         initial={{ opacity: 0, translateX: -200 }}
         whileInView={{ opacity: 1, translateX: 0 }}
         className="card duration-500"
       >
-        <motion.section className="card-cont-img">
-          <motion.picture className="card-img">
+        <section className="card-cont-img">
+          <picture className="card-img">
             <a href={url} target="blanck">
               {" "}
               <img
@@ -52,20 +52,20 @@ const CardProject = ({
                 className="card-img-image"
               />{" "}
             </a>
-          </motion.picture>
-        </motion.section>
+          </picture>
+        </section>
 
-        <motion.section className="card-body">
-          <motion.section className="card-info">
-            <motion.p className="title">{name}</motion.p>
-            <motion.p className="subtitle">{tecnology}</motion.p>
-          </motion.section>
-          <motion.section className="card-buttons">
+        <section className="card-body">
+          <section className="card-info">
+            <p className="title">{name}</p>
+            <p className="subtitle">{tecnology}</p>
+          </section>
+          <section className="card-buttons">
             <motion.ul
               initial="hidden"
               animate="visible"
               variants={list}
-              transition={{ duration: 1.5 }}
+              transition={{ duration: 1.5, ease: "linear" }}
               className="social-media"
             >
               <motion.li variants={item}>
@@ -88,8 +88,8 @@ const CardProject = ({
                 </a>
               </motion.li>
             </motion.ul>
-          </motion.section>
-        </motion.section>
+          </section>
+        </section>
       </motion.article>
     </>
   );

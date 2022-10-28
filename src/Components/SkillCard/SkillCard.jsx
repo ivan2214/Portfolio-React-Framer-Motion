@@ -8,7 +8,14 @@ const SkillCard = ({ skill, icon, item }) => {
       variants={item}
       className="flex justify-center items-center flex-col w-full cont-img-skills gap-10 overflow-hidden "
     >
-      <img loading="lazi" className="image-skills" src={icon} alt={skill} />
+      <img
+        width="1000"
+        height="1000"
+        loading="lazi"
+        className="image-skills"
+        src={icon}
+        alt={skill}
+      />
       <h3 className=" text-tecnology font-medium">{skill}</h3>
     </motion.article>
   );

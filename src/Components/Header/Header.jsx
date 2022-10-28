@@ -9,23 +9,26 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 const Header = () => {
   return (
     <header className="cont">
-      <figure className="cont-img ">
+      <picture className="cont-img ">
         <motion.img
           /* transition={{ duration: 1.5 }}
           initial={{ opacity: 0, translateX: -200, rotateZ: 0 }}
           whileInView={{ opacity: 1, translateX: 0 }}
           animate={{ rotateZ: 380 }} */
-          transition={{ duration: 1.5 }}
-          initial={{ opacity: 0,translateX: -200, rotateZ: 0 }}
-          animate={{ opacity: 1, translateX: 0,rotateZ: 380 }}
+          transition={{ duration: 1.5, ease: "linear" }}
+          initial={{ opacity: 0, translateX: -200, rotateZ: 0 }}
+          animate={{ opacity: 1, translateX: 0, rotateZ: 380 }}
           exit={{ rotateZ: 0 }}
           src={img}
+          width="1000"
+          height="1000"
+          loading="lazi"
           className="cont-img-image "
           alt=""
         />
-      </figure>
+      </picture>
       <motion.section
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 1.5, ease: "linear" }}
         initial={{ opacity: 0, translateX: -200 }}
         animate={{ opacity: 1, translateX: 0 }}
         className="cont-texts"

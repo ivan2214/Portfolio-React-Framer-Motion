@@ -34,16 +34,16 @@ const NavRedes = () => {
           <a
             href="mailto:bongiovanniivan12@gmail.com?Subject=Me%20contacto%20por%20medio%20tu%20portafolio%20y%20quisiera%20poder%20establecer%20una%20charla%20contigo"
             target="blanck"
-            className="nav-itemRedes"
+            className="nav-link"
           >
             <FontAwesomeIcon icon={faEnvelope} target="blanck" size={"2xl"} />
           </a>
         </li>
-        <li className="nav-item">
+        <li className="nav-itemRedes">
           <a
             href="https://walink.co/74213e"
             target="blanck"
-            className="nav-itemRedes"
+            className="nav-link"
           >
             <FontAwesomeIcon icon={faWhatsapp} target="blanck" size={"2xl"} />
           </a>
