@@ -40,17 +40,19 @@ const CardProject = ({
         className="card duration-500"
       >
         <motion.section className="card-cont-img">
-          <motion.figure className="card-img">
+          <motion.picture className="card-img">
             <a href={url} target="blanck">
               {" "}
               <img
+                width="1000"
+                height="1000"
                 loading="lazi"
                 src={image}
                 alt={description}
                 className="card-img-image"
               />{" "}
             </a>
-          </motion.figure>
+          </motion.picture>
         </motion.section>
 
         <motion.section className="card-body">
