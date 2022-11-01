@@ -33,12 +33,14 @@ const Skills = () => {
       transition={{ duration: 1.5 }}
       initial={{ opacity: 0, translateX: -200 }}
       whileInView={{ opacity: 1, translateX: 0 }}
+      viewport={{ once: true }}
       id="skills"
     >
       <motion.h3
         transition={{ duration: 1.5 }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
         className="text-4xl capitalize font-bold"
       >
         <FontAwesomeIcon

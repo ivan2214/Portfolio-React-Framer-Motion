@@ -62,9 +62,10 @@ const Projects = () => {
   return (
     <section id="projects">
       <motion.h3
-        transition={{ duration: 1, ease: "linear" }}
+        transition={{ duration: 1.5 }}
         initial={{ opacity: 0, translateX: -100 }}
         whileInView={{ opacity: 1, translateX: 0 }}
+        viewport={{ once: true }}
         className="text-4xl capitalize font-bold"
       >
         <FontAwesomeIcon

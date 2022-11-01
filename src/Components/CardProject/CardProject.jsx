@@ -36,10 +36,11 @@ const CardProject = ({
   return (
     <>
       <motion.article
-        transition={{ duration: 1.5, ease: "linear" }}
+        transition={{ duration: 1.5 }}
         initial={{ opacity: 0, translateX: -200 }}
         whileInView={{ opacity: 1, translateX: 0 }}
-        className="card duration-500"
+        viewport={{ once: true }}
+        className="card "
       >
         <section className="card-cont-img">
           <picture className="card-img">
